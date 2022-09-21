@@ -6,4 +6,4 @@ Ce site n'a pas pour but de remplacer la documentation officielle de chaque cons
 
 Si vous rencontrez des difficultés ou avez besoin d'aide sur certaines technologies, n'hésitez pas à me contacter :)
 
-[lien vers d'autres pages:](autre.md)
+[lien vers d'autres pages](autre.md)
