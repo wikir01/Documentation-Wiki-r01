@@ -79,11 +79,11 @@ iTAG-SCOPE : Environnement-PROD, Service-DOMAIN, Service-PKI, Service-NTP, Criti
 
 i. Environnement : PROD QUAL DEV PCI DMZ
 
-![](/nsx-t/6prodqualdev1.png)
+![](/vmware/nsx-t/6prodqualdev1.png)
 
-![](/nsx-t/6prodqualdev2.png)
+![](/vmware/nsx-t/6prodqualdev2.png)
 
-![](/nsx-t/6prodqualdev3.png)
+![](/vmware/nsx-t/6prodqualdev3.png)
 
 v. Il faut pouvoir réutiliser les tag. Tagger gros, tagger petit, mettre des tags partout et plusieurs tag. Environnement PROD vers TAG AD en LDAP.
 
@@ -103,7 +103,7 @@ c. Démarrer large et ensuite terminer précisement
 
 Dans NSX-T 3.0, il a un nouveau menu dans Inventory > Tags qui permet de voir tous les tags qui ont été créés.
 
-![](/nsx-t/menutag.png)
+![](/vmware/nsx-t/menutag.png)
 
 #### 8\. Groupes les objets avec les tags (statiquement ou dynamiquement)
 
@@ -116,34 +116,34 @@ Points importants sur le Groupage:
 
 ##### Dynamic Grouping:
 
-![](/nsx-t/8a.png)
+![](/vmware/nsx-t/8a.png)
 
 ##### Static Grouping:
 
-![](/nsx-t/8b.png)
+![](/vmware/nsx-t/8b.png)
 
 Il faut appliquer des TAG sur des VM et ensuite il faut les grouper. Un TAG seul ne suffit pas.
 
 Il faut aller dans Inventory > Groups pour avoir la liste des groupes et en créer de nouveaux.
 
-![](/nsx-t/9d.png)
+![](/vmware/nsx-t/9d.png)
 
-![](/nsx-t/9e.png)
+![](/vmware/nsx-t/9e.png)
 
-![](/nsx-t/9g.png)
+![](/vmware/nsx-t/9g.png)
 
-![](/nsx-t/9f.png)
+![](/vmware/nsx-t/9f.png)
 
 On peut voir que le groupe dispose d'un Criteria dans le Compute Members. On peut rajouter autant de Criteria qu'on veut.
 
-![](/nsx-t/groups.png)
+![](/vmware/nsx-t/groups.png)
 
 #### 9\. Créer les fw policy dans le DFW
 
 *   Une DFW définit la portée d’une règle qui  se trouve dans la policy. On définit la policy en premier avec sa portée et ensuite on applique la rule de sécurité qui est appliquée sur la policy. Par exemple, on applique ça sur le groupe de l’environnement de PRODUCTION. C’est dans le champ « applied to ».  
 *   POLICY AND RULE (fonction ET).
 
-![](/nsx-t/9b.png)
+![](/vmware/nsx-t/9b.png)
 
 Dans la capture ci dessus:
 
@@ -166,7 +166,7 @@ Aller dans Security > Distributed Firewall, puis cliquer dans l'onglet Infrastru
 
 Premièrement il faut créer une nouvelle Policy :
 
-![](/nsx-t/10-1.png)
+![](/vmware/nsx-t/10-1.png)
 
 La nommer “NTP”
 
@@ -174,21 +174,21 @@ Appliquer cette policy à un groupe (Choisissez en un existant ou en créer un n
 
 Nouveau Groupe: 
 
-![](/nsx-t/10-2.png)
+![](/vmware/nsx-t/10-2.png)
 
 Sélectionner le groupe nouvellement créé: 
 
-![](/nsx-t/10-3.png)
+![](/vmware/nsx-t/10-3.png)
 
 Vue de la nouvelle Policy: 
 
-![](/nsx-t/10-4.png)
+![](/vmware/nsx-t/10-4.png)
 
 Une fois la policy créée, il faut ajouter une Rule en dessous en faisait un clic droit dessus.
 
 Donner une description dans “name” puis configurer la Rule.
 
-![](/nsx-t/10-5.png)
+![](/vmware/nsx-t/10-5.png)
 
 La colonne **Service** correspond au L4 alors que la colonne **Profiles** correspond au L7.
 
@@ -198,7 +198,7 @@ Il faut appliquer les Policy qu'a des groupes. Si on prend le DFW alors ça va s
 
 Dans la catégorie **Environment**, on peut appliquer des règles d'isolation entre tenant/environnement par exemples l’environnement de **Qualification** n'a pas le droit de contacter et d'être contacter par  l’environnement de **Production.**
 
-![](/nsx-t/tenant.png)
+![](/vmware/nsx-t/tenant.png)
 
 Les composants Infrastructure commun aux environnements ne doivent pas tagués dans un environnement..
 
@@ -215,7 +215,7 @@ Ensuite on peut créer des rules:
 *   “App to DB” avec comme groupe source App-tier vers DB-tier sur les ports des bases de données TCP/3306 appliqué à tous le DFW
 *   Dernière règle a ajouter est le Drop appliqué sur le DFW
 
-![](/nsx-t/dfw.png)
+![](/vmware/nsx-t/dfw.png)
 
 #### Exemple de micro segmentation:
 
@@ -225,6 +225,6 @@ Ensuite on peut créer des rules:
 
 Note: Dans la colonne **Services** de la règle ID **5097**, il aurait fallut mettre **https** et non pas **any**. Sinon les clients pourraient accéder à web-01a sur tous les ports TCP/UDP ainsi que d'autres protocoles comme l'ICMP.
 
-![](/nsx-t/infra_nsx_microseg.png)
+![](/vmware/nsx-t/infra_nsx_microseg.png)
 
-![](/nsx-t/app_nsx_microseg.png)
+![](/vmware/nsx-t/app_nsx_microseg.png)
