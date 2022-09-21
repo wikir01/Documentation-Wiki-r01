@@ -12,9 +12,9 @@ global_defs {
 }
 vrrp_script check_nginx_alive {
     script “pidof nginx” #on verifie que le processus de nginx tourne toujours
-    `interval 4 #on execute le script toutes les 4 secondes
-    `rise 2 # 2 Success pour OK
-    `fall 2 # 2 Echecs pour KO
+    interval 4 #on execute le script toutes les 4 secondes
+    rise 2 # 2 Success pour OK
+    fall 2 # 2 Echecs pour KO
 }
 vrrp_instance VI_1 {
     state MASTER
@@ -33,5 +33,5 @@ vrrp_instance VI_1 {
         check_nginx_alive
     }
 }
-
+```
 Plus d'info ici en anglais: [https://www.redhat.com/sysadmin/keepalived-basics](https://www.redhat.com/sysadmin/keepalived-basics)
