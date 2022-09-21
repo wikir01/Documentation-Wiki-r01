@@ -12,16 +12,12 @@ upstream VS-DNS {
          server 10.0.0.2:53;
 }
 ```
-`server {`
-
-         `listen 53:`
-
-         `listen 53 udp;`
-
-         `proxy_pass VS-DNS;`
-
-         `error_log /chemin/vers/fichier/error.log info;`
-
-         `accesslog /chemin/vers/fichier/access.log.json upstreamlog_json_combined;`
-
+```
+server {
+         listen 53:
+         listen 53 udp;
+         proxy_pass VS-DNS;
+         error_log /chemin/vers/fichier/error.log info;
+         accesslog /chemin/vers/fichier/access.log.json upstreamlog_json_combined;
+```
 Je vous renvoie vers la doc officielle de nginx pour plus de détail.
