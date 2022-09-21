@@ -73,7 +73,7 @@ e. Documentation officielle du constructeur  
 
 iTAG-SCOPE : Environnement-PROD, Service-DOMAIN, Service-PKI, Service-NTP, Critical
 
-![](/nsx-t/6keyvalue.png)
+![](/vmware/nsx-t/6keyvalue.png)
 
 ##### Organisation standardisée d’un point de vue architecture
 
