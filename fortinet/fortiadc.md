@@ -170,4 +170,4 @@ SEC\_E\_UNSUPPORTED\_FUNCTION 0x80090302
 
 Exemple de profil Access Protection (WAF) pour bloquer page admin Wordpress
 ---------------------------------------------------------------------------
-[](/images/adc-waf-wordpress-admin-protect.png)
+[](/fortinet/images/adc-waf-wordpress-admin-protect.png)
