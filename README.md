@@ -9,4 +9,4 @@ Si vous rencontrez des difficultés ou avez besoin d'aide sur certaines technolo
 ### Autres liens
 
 [Lien pour moi même pour retrouver comment écrire en Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-[Autres liens)(autresliens.md)
+[Autres liens](autresliens.md)
