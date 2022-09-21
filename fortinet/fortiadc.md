@@ -166,3 +166,8 @@ TLS1\_ALERT\_PROTOCOL\_VERSION 70
 SEC\_E\_UNSUPPORTED\_FUNCTION 0x80090302
 
 → TLS1.0 manquant (oui ils utilisent encore ça) et à activer dans le Menu Server Load Balance → Application Resources → Profile SSL Custom et rajouter TLS1.0 (ou autre).
+
+
+Exemple de profil Access Protection (WAF) pour bloquer page admin Wordpress
+---------------------------------------------------------------------------
+[](/images/adc-waf-wordpress-admin-protect.png)
