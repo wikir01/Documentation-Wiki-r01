@@ -170,4 +170,6 @@ SEC\_E\_UNSUPPORTED\_FUNCTION 0x80090302
 
 Exemple de profil Access Protection (WAF) pour bloquer page admin Wordpress
 ---------------------------------------------------------------------------
+Sur wordpress, l'URI d'administration est /wp-admin/. Si l'on souhaite bloquer l'accès à cette page avec la fonction Access/Url Protection du module WAF du FortiADC alors il suffit de faire comme ceci: 
+
 ![](/fortinet/images/adc-waf-wordpress-admin-protect.png)
