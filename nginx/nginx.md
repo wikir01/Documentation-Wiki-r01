@@ -6,15 +6,12 @@ Le fichier de configuration est en deux parties: 
 *   server: contient la configuration du virtual server nginx (port d'écoute du VS, les logs)
 
 Voici un exemple de fichier de configuration pour du load balancing simple vers deux serveurs qui écoutent en TCP 53.
-
-`upstream VS-DNS {`
-
-         `server 10.0.0.1:53;`
-
-         `server 10.0.0.2:53;`
-
-`}`
-
+```
+upstream VS-DNS {
+         server 10.0.0.1:53;
+         server 10.0.0.2:53;
+}
+```
 `server {`
 
          `listen 53:`
