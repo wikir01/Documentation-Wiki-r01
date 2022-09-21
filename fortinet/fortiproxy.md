@@ -16,6 +16,8 @@ Je n'ai pas réussi à réimporter un backup depuis une clé usb, la commande ex
 
 Les commandes execute usb-disk list  et execute usb-device list me retournaient aucun résultats. Je n'ai pas compris. J'ai cependant pu formater la clé usb depuis la CLI FortiProxy preuve qu'il voyait quand même que chose.
 
+Dans le cadre d'un transfert FTPS:
+
 530 The server does not support SSL. Please reconnect with SSL disabled.
 
 Cela veut dire que le fortiproxy n'arrive pas à joindre le serveur de destination. C'est une erreur qui porte à confusion.
