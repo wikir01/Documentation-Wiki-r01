@@ -22,6 +22,31 @@ Dans le cadre d'un transfert FTPS:
 
 Cela veut dire que le fortiproxy n'arrive pas à joindre le serveur de destination. C'est une erreur qui porte à confusion.
 
+# Configurer interface management dédié
+
+Sur le primaire: 
+
+Aller dans System HA > Cocher la case "Management Interface Reservation"
+Sélectionner le port dédié au management
+Définir la GW.
+
+Ensuite aller dans Network Interface > Selectionner le port dédié au management et le configurer avec les IP et bonnes infos.
+
+Pour configurer le secondaire, depuis le primaire, aller en CLI 
+
+execute ha manage 1 <username>
+config system ha
+  set ha-mgmt-status ensable
+  config ha-mgmt-interfaces
+    edit 1
+        set interface "port2" (c'est le port choisi pour l'administration)
+        set gateway <gw>
+    next
+  end
+  end
+
+
+
 # Mise à jour d'un FortiProxy de 7.0.5 à 7.2
 
 ## Prérequis: 
@@ -39,6 +64,5 @@ Cliquer sur Backup Config and Upgrade.
 A partir de la, le fortiproxy fera la mise à jour.
 Le système va redémarrer.
 
-Pour prendre la main sur le deuxième membre du cluster en HA:
-execute ha manage 1 <username>
+
 
