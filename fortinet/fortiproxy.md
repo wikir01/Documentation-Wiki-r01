@@ -44,7 +44,18 @@ config system ha
     next
   end
   end
-
+  
+Une fois que c'est fait, il faut configurer le port2 (port choisi pour le management dédié)
+config system interface
+  edit "port2"
+      set ip 10.A.B.C 255.255.255.0
+      set allowaccess ping https ssh http
+      set type physical
+      set alias "Management-Dedie"
+      set role lan
+      set snmp-index 2
+  next
+end
 
 
 # Mise à jour d'un FortiProxy de 7.0.5 à 7.2
