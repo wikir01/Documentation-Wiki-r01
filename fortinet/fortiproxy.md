@@ -21,3 +21,24 @@ Dans le cadre d'un transfert FTPS:
 530 The server does not support SSL. Please reconnect with SSL disabled.
 
 Cela veut dire que le fortiproxy n'arrive pas à joindre le serveur de destination. C'est une erreur qui porte à confusion.
+
+# Mise à jour d'un FortiProxy de 7.0.5 à 7.2
+
+## Prérequis: 
+- Aller voir la release note: https://docs.fortinet.com/document/fortiproxy/7.2.0/release-notes/146706/introduction
+- Aller sur https://support.fortinet.com/Download/FirmwareImages.aspx pour télécharger la version 7.2 du FortiProxy.
+- Vérifier l'intégriter du firmware avec le hash
+- Faire un backup de la configuration du FortiProxy
+
+## Mise à jour
+
+Aller dans System > Firmware > Select Firmware > File Upload
+Selectionner le fichier .out de mise à jour et l'importer.
+Cliquer sur Backup Config and Upgrade. 
+
+A partir de la, le fortiproxy fera la mise à jour.
+Le système va redémarrer.
+
+Pour prendre la main sur le deuxième membre du cluster en HA:
+execute ha manage 1 <username>
+
