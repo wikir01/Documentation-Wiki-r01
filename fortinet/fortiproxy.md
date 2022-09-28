@@ -75,7 +75,8 @@ Cliquer sur Backup Config and Upgrade.
 A partir de la, le fortiproxy fera la mise à jour.
 Le système va redémarrer.
 
-= Liens utiles pour FortiProxy: 
+## Liens utiles pour FortiProxy: 
+  
   Utiliser un proxy pour joindre internet pour mettre à jour fortiguard (dans le cas ou le fortiproxy n'est pas directement exposé sur internet: 
   https://community.fortinet.com/t5/FortiGate/Technical-Tip-FortiGuard-updates-using-a-proxy-server/ta-p/191904
 
