@@ -74,6 +74,41 @@ Cliquer sur Backup Config and Upgrade.
 
 A partir de la, le fortiproxy fera la mise à jour.
 Le système va redémarrer.
+  
+# FortiProxy Explicit FTPS Proxy
+  ## Activer la fonction Explicit FTP Proxy sur le FortiProxy
+  1- Dans Proxy Settings > FTP Proxy, activer le Explicit FTP Proxy.
+  2- Définir les IP d'entrée et de sortie (on peut laisser 0.0.0.0 car dans la Policy on va Binder le FTP Proxy à une interface
+  3- Définir les Incoming ports
+  
+  ## Activer l'écoute du service Explicit FTP Proxy sur l'interface réseau souhaitée
+  1- Aller dans Network > Interfaces
+  2- Choisir son interface d'écoute (dans mon cas un VLAN sur un aggregat de lien) et double cliquer dessus
+  3- Descendre tout en bas de la page dans la section Miscellaneous et activer Explicit FTP Proxy
+   _Note: à ce stade, le proxy FTP est activé mais pas encore la fonction SSL (en vrai TLS, svp ne faites plus de SSL) pour faire du FTPS_
+  
+  ## Activer la fonction SSL
+  1- en CLI: 
+  config ftp-proxy explicit
+  set ssl enable
+  end
+  
+  ## Créer la Policy de proxification FTPS
+  1- Dans Policy & Object > Policy, créer une nouvelle Policy
+  Type: FTP
+  Name: Policy FTPS
+  Outgoing Interface: Spécifier l'interface de sortie du trafic une fois proxifié
+  Source: <votre source>
+  Destination: <le serveur de destination FTPS>
+  Action: ACCEPT
+  Dans Proxy Options, il va falloir spécifier le certificat à proposer au client. Ce certificat est porté par le Fortiproxy et sera proposé au client lorsqu'il se connecte. Ici j'ai laissé le certificat par défaut, mais dans un environement de production il faut faire une CSR, la faire signer par la PKI de l'entreprise et ensuite réimporter le certificat (je ferai surement une doc un jour pour ça).
+  Vous pouvez laisser le reste par défaut même si dans mon cas j'ai activé l'AV, l'IPS et je log toutes les sessions dès qu'elles démarrent.
+  Tout en bas, activer "Enable this policy".
+  2- Cliquer sur OK pour valider la création de la policy
+  
+  
+  
+  
 
 ## Liens utiles pour FortiProxy: 
   
