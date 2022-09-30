@@ -106,7 +106,7 @@ Le système va redémarrer.
   Tout en bas, activer "Enable this policy".
   2- Cliquer sur OK pour valider la création de la policy
   
-  
+  ![](/fortinet/images/Policy.png)
   
   
 
