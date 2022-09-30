@@ -97,24 +97,15 @@ Le système va redémarrer.
   
   ## Créer la Policy de proxification FTPS
   * Dans Policy & Object > Policy, créer une nouvelle Policy
-  Type: FTP
-  
-  Name: Policy FTPS
-  
-  Outgoing Interface: Spécifier l'interface de sortie du trafic une fois proxifié
-  
-  Source: <votre source>
-  
-  Destination: <le serveur de destination FTPS>
-  
-  Action: ACCEPT
-  
-  Dans Proxy Options, il va falloir spécifier le certificat à proposer au client. Ce certificat est porté par le Fortiproxy et sera proposé au client lorsqu'il se connecte. Ici j'ai laissé le certificat par défaut, mais dans un environement de production il faut faire une CSR, la faire signer par la PKI de l'entreprise et ensuite réimporter le certificat (je ferai surement une doc un jour pour ça).
-  
-  Vous pouvez laisser le reste par défaut même si dans mon cas j'ai activé l'AV, l'IPS et je log toutes les sessions dès qu'elles démarrent.
-  
-  Tout en bas, activer "Enable this policy".
-  
+    * Type: FTP
+    * Name: Policy FTPS
+    * Outgoing Interface: Spécifier l'interface de sortie du trafic une fois proxifié
+    * Source: <votre source>
+    * Destination: <le serveur de destination FTPS>
+    * Action: ACCEPT
+    * Dans Proxy Options, il va falloir spécifier le certificat à proposer au client. Ce certificat est porté par le Fortiproxy et sera proposé au client lorsqu'il se connecte. Ici j'ai laissé le certificat par défaut, mais dans un environement de production il faut faire une CSR, la faire signer par la PKI de l'entreprise et ensuite réimporter le certificat (je ferai surement une doc un jour pour ça).
+    * Vous pouvez laisser le reste par défaut même si dans mon cas j'ai activé l'AV, l'IPS et je log toutes les sessions dès qu'elles démarrent.
+    * Tout en bas, activer "Enable this policy".
   * Cliquer sur OK pour valider la création de la policy
   
   ![](/fortinet/images/Policy.png)
