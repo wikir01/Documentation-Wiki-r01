@@ -8,9 +8,17 @@ Si vous rencontrez des difficultés ou avez besoin d'aide sur certaines technolo
 
 # Sommaire
 1. [Cisco ASA](/Cisco/CiscoASA.md)
-2. [Palo Alto](/Palo\ Alto/PaloAlto.md)
+2. [Palo Alto](/Palo Alto/PaloAlto.md)
 3. [Arista](/Switches/Arista.md)
 4. [f5 BIG-IP](/f5-BIG-IP/Manuel-Exploitation.md)
+5. [Fortinet FortiProxy](/fortinet/fortiproxy.md)
+6. [Fortinet FortiADC](/fortinet/fortiadc.md)
+7. [Fortinet FortiGate](/fortinet/fortigate.md)
+8. [KeepAlived](/keepalived/keepalived.md)
+9. [nginx](/nginx/nginx.md)
+10. [vmware NSX-T: automation](/vmware/NSX-T-Automation-API.md)
+11. [vmware NSX-T: Microsegmentation](/vmware/NSX-T-MicroSegmentation.md)
+12. [vmware NSX-T: automation](/vmware/NSX-T-Automation-API.md)
 
 ### Autres liens
 
