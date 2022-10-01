@@ -33,3 +33,5 @@ powertop
 tlp
 
 sur top maj+1 pour afficher tous les CPU
+
+Dans vim pour supprimer 100 lignes: d100d
