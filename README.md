@@ -8,7 +8,7 @@ Si vous rencontrez des difficultés ou avez besoin d'aide sur certaines technolo
 
 # Sommaire
 1. [Cisco ASA](/Cisco/CiscoASA.md)
-2. [Palo Alto](/Palo Alto/PaloAlto.md)
+2. [Palo Alto](/Palo%20Alto/PaloAlto.md)
 3. [Arista](/Switches/Arista.md)
 4. [f5 BIG-IP](/f5-BIG-IP/Manuel-Exploitation.md)
 5. [Fortinet FortiProxy](/fortinet/fortiproxy.md)
