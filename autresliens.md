@@ -28,10 +28,16 @@ https://traefik.io/
 
 https://www.envoyproxy.io/try/
 
+## Autre
+
 powertop
 
 tlp
 
 sur top maj+1 pour afficher tous les CPU
+
+## Serveur FTP ouvert pour faire des tests de DPL
+
+https://dlptest.com/ftp-test/
 
 Dans vim pour supprimer 100 lignes: d100d
