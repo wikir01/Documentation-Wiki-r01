@@ -71,3 +71,7 @@ Autre
 -----
 
 [https://www.brg.ch/fortigate-troubleshooting-cli-gen-en/](https://www.brg.ch/fortigate-troubleshooting-cli-gen-en/)
+
+## Diff de conf dans un cluster en HA
+
+[https://community.fortinet.com/t5/FortiGate/Troubleshooting-Tip-HA-synchronization-issue-cluster-out-of-sync/ta-p/193422](https://community.fortinet.com/t5/FortiGate/Troubleshooting-Tip-HA-synchronization-issue-cluster-out-of-sync/ta-p/193422)
