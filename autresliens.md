@@ -22,6 +22,8 @@ https://crowdsec.net/
 
 https://jellyfin.org/
 
+Pour télécharger un fichier reconnu comme étant un virus faux positif: https://www.eicar.org/download-anti-malware-testfile/
+
 ### **RP:**
 
 https://traefik.io/
