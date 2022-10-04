@@ -11,6 +11,9 @@ bigtop -vname -delay 1 -vips 100 -delta
 # iRule pour remplacer le champ host de l'entête HTTP
 
 `when HTTP_REQUEST {`
-`HTTP::header replace Host "truc.internal"
+
+`HTTP::header replace Host "truc.internal"'
+
 `pool le_pool`
+
 `}`
