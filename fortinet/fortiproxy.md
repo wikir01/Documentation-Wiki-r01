@@ -113,7 +113,32 @@ Le système va redémarrer.
 530 The server does not support SSL. Please reconnect with SSL disabled.
 
 Cela veut dire que le fortiproxy n'arrive pas à joindre le serveur de destination. C'est une erreur qui porte à confusion.
+
+## Debug problème de license / communication avec fortiguard
+``` 
+get system status
+get system perf status
+execute ping 8.8.8.8
+execute ping update.fortiguard.net
+execute ping service.fortiguard.net
+show full system fortiguard
+show full system central-management
+diagnose debug rating
+diagnose autoupdate version
+diagnose debug crashlog read
+diagnose debug application update -1
+diagnose debug enable
+execute update-now 
+``` 
   
+Let it run for 5 minutes, then stop the debug by: 
+``` 
+diagnose debug disable
+diagnose debug reset 
+``` 
+
+Once the same is done, Please verify the status of subscription license and update us with the logs. Thank you.
+
   
 
 ## Liens utiles pour FortiProxy: 
