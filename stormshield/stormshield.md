@@ -16,6 +16,8 @@ portinfo permet d'avoir le status des ports du stormshield.
 
 Par défaut, le stormshield propose un DHCP en 10.0.0.10 au client et le stormshield écoute en 10.0.0.254
 
+![](/stormshield/images/ConfIPWindows.png)
+
 L'URL d'administartion est la suivante https://10.0.0.254/admin
 
 Compte: admin/admin
