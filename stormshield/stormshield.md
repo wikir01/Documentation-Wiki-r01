@@ -32,3 +32,10 @@ Vous verrez un message indiquant qu'il faut lui donner une licence. Vous retrouv
 
 Allez dans Système > Licence et installer le fichier de licence. 
 
+## Mettre à jour un Stormshield
+
+Aller dans Configuration > Système Maintenance et y uploader la mise à jour.
+
+Lors de la mise à jour, il est possible d'utiliser la partition de sauvegarde si besoin de revenir en arrière (recommandé).
+Dans une configuration en cluster, il est possible de faire
+
