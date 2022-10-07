@@ -18,13 +18,13 @@ Par défaut, le stormshield propose un DHCP en 10.0.0.10 au client et le stormsh
 
 **portinfo** permet d'avoir le status des ports du stormshield.
 
-![](stormshield/images/portinfo.png)
+![](/stormshield/images/portinfo.png)
 
 L'URL d'administartion est la suivante https://10.0.0.254/admin
 
 Compte: admin/admin
 
-![](stormshield/images/pageaccueilstormshield.png)
+![](/stormshield/images/pageaccueilstormshield.png)
 
 ![](/stormshield/images/Accueilstormshieldauthentifié.png)
 
