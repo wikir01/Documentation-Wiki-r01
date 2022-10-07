@@ -26,7 +26,7 @@ Compte: admin/admin
 
 ![](stormshield/images/pageaccueilstormshield.png)
 
-![](/stormshield/images/Accueilstormshieldauthentifié.png=
+![](/stormshield/images/Accueilstormshieldauthentifié.png)
 
 Vous verrez un message indiquant qu'il faut lui donner une licence. Vous retrouverez la licence sur le site mystormshield.eu.
 
