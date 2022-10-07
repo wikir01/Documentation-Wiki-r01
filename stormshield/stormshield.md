@@ -38,5 +38,5 @@ Aller dans Configuration > Système Maintenance et y uploader la mise à jour.
 
 Lors de la mise à jour, il est possible d'utiliser la partition de sauvegarde si besoin de revenir en arrière (recommandé).
 
-
+Dans le cadre d'un cluster en HA, commencer par le secondaire, vérifier que ça fonctionne en basculant sur le secondaire qui est à jour puis si ça marche faire la mise à jour sur le primaire.
 
