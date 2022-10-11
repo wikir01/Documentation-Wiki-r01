@@ -73,4 +73,11 @@ Cocher la case "Chiffrer la communication entre les firewalls"
 
 Capture configHA2
 
+Faites suivant.
+Vous aurez un résumé de la configuration avant de la valider.
+
+Capture configHA3
+
+Cliquer sur Terminer. 
+
 
