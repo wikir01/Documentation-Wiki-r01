@@ -58,5 +58,9 @@ On peut voir (qu'avec de la chance) le port 7 du S710 secondaire s'appelle aussi
 
 Répéter l'action pour faire une HA sur deux ports différents de chaque boitier (objectif: avoir deux câbles ethernet entre les deux SN710 pour la Haute Dispo)
 
+Dans mon cas, c'est idb5 qui correspond au port physique 8 de mes deux stormshield.
+
+Nous avons donc idb4 qui correspond aux ports physiques 7 et idb5 au ports physiques 8
+
 
 
