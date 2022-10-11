@@ -102,3 +102,27 @@ Une interface de type **externe (publique)** peut voir des IP autres que celles 
 
 Dans Configuration > Réseau > Interfaces, il faut sortir les interfaces qu'on souhaite utiliser (en dehors de la HA) du bridge. Le bridge c'est la conf par défaut et dans mon cas je n'en ai pas besoin. Je sors donc deux interfaces: une de management et une pour les flux de production. 
 
+## Dédier une interface de management dédiée 
+
+Aller dans Configuration > Réseau > Interfaces et sélectionner une interface qui sera dédiée au management. La configurer comme ceci:
+
+Capture Configuration Management.png
+
+### Limiter les accès à l'interface de management
+
+**Attention** Par défaut, le Stormshield propose son interface d'administration sur tous les ports. Il faut limiter l'accès à l'interface de management au réseau d'administration. 
+
+Pour cela, aller dans Configuration > Système > Configuration > Administration du Firewall et rajouter la plage IP autorisée à accéder à l'interface de management.
+
+Il faut créer autant d'objets dans Configuration > Objets que de plages IP qu'on veut autoriser à joindre le management.
+
+## Configurer une interface physique comme un trunk avec plusieurs VLANs
+
+Piège: il faut mettre l'interface physique en DHCP avant de mettre des VLAN dessus.
+
+Une fois que l'interface physique est configurée en DHCP (même si on n'en fait pas..) il faut maintenant créer les VLAN à rattracher sur cette interface. Toujours dans le même menu Configuration > Réseau > Interfaces, il faut cliquer sur "Ajouter" et sélectionner **Ajouter un VLAN**
+
+Capture Création de VLAN
+
+
+
