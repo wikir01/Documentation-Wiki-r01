@@ -64,5 +64,13 @@ Nous avons donc dmz5 qui correspond aux ports physiques 7 et idb6 au ports physi
 
 Pour construire la HA, aller dans Configuration > Système > Haute Disponibilité 
 
+Définir les interfaces de HA avec les informations précédemment récupérées.
+
+Capture ConfigHA
+
+L'assitant va vous demander de rentrer la clé prépartagée pour la mise en cluster. (Eviter les " dans le mot de passe).
+Cocher la case "Chiffrer la communication entre les firewalls"
+
+Capture configHA2
 
 
