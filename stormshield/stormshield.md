@@ -96,5 +96,9 @@ LED Fixe = primaire
 
 LED clignotante = secondaire 
 
+Une interface de type **interne (protégée)** ne doit voir que des IP du réseau qui est déclaré sur l'interface. Sinon c'est considéré comme une usurpation d'IP. 
+
+Une interface de type **externe (publique)** peut voir des IP autres que celles du réseau sur lequel elle est (c'est fait pour une interface exposée à internet / le reste du monde).
+
 
 
