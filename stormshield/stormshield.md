@@ -82,4 +82,19 @@ Cliquer sur Terminer. A ce moment, le stormshield primaire est configuré et il 
 
 Capture configHA4 et configHA5
 
+Sur le secondaire, aller Configuration > Système > Haute Disponibilité et faire **Rejoindre un groupe de firewalls (cluster) existant**
+
+Entrer les informations nécessaires. Préciser l'IP du membre primaire: 1.1.1.1 ainsi que la clé PSK définie au préalable. 
+
+En cliquant sur suivant vous pourrez confirmer tous les paramètres déjà entrés et valider la mise en cluster. 
+
+Les stormshield vont redemarrer (et feront un petit bruit mignon)
+
+Une fois que les deux stormshields ont redemarré, en façade, il y a 3 LED: la première LED est le status du cluster (si le membre est primaire ou secondaire).
+
+LED Fixe = primaire
+
+LED clignotante = secondaire 
+
+
 
