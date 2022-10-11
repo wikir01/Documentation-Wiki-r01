@@ -78,6 +78,8 @@ Vous aurez un résumé de la configuration avant de la valider.
 
 Capture configHA3
 
-Cliquer sur Terminer. A ce moment, le stormshield primaire va configurer le stormshield secondaire et le cluster sera formé. 
+Cliquer sur Terminer. A ce moment, le stormshield primaire est configuré et il faut faire la même configuration sur le secondaire.
+
+Capture configHA4 et configHA5
 
 
