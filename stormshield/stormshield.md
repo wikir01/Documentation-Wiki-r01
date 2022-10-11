@@ -40,3 +40,23 @@ Lors de la mise à jour, il est possible d'utiliser la partition de sauvegarde s
 
 Dans le cadre d'un cluster en HA, commencer par le secondaire, vérifier que ça fonctionne en basculant sur le secondaire qui est à jour puis si ça marche faire la mise à jour sur le primaire.
 
+## Mise en HA d'un cluster de Stormshield SN710
+
+Pour identifier le port sur lequel la HA va être montée, il faut aller en console et faire la commande **portinfo**.
+
+Capture portinfo-master.
+
+Le câble ethernet pour la HA est branchée sur le port 7 du boitier qui correspond au port igb4 dans le système stormshield /!\ Le port idbX ne correspond souvent pas au numéro du port physique sur l'appliance /!\
+
+Il fait répéter l'action sur le SN710 secondaire pour aussi identifier le port système idbX. 
+
+Brancher le câble console sur le secondaire, se connecter avec admin/admin et faire **portinfo**
+
+Capture portinfo-secondaire
+
+On peut voir (qu'avec de la chance) le port 7 du S710 secondaire s'appelle aussi idb4.
+
+Répéter l'action pour faire une HA sur deux ports différents de chaque boitier (objectif: avoir deux câbles ethernet entre les deux SN710 pour la Haute Dispo)
+
+
+
