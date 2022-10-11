@@ -100,5 +100,5 @@ Une interface de type **interne (protégée)** ne doit voir que des IP du résea
 
 Une interface de type **externe (publique)** peut voir des IP autres que celles du réseau sur lequel elle est (c'est fait pour une interface exposée à internet / le reste du monde).
 
-
+Dans Configuration > Réseau > Interfaces, il faut sortir les interfaces qu'on souhaite utiliser (en dehors de la HA) du bridge. Le bridge c'est la conf par défaut et dans mon cas je n'en ai pas besoin. Je sors donc deux interfaces: une de management et une pour les flux de production. 
 
