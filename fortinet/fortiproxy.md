@@ -148,8 +148,8 @@ Once the same is done, Please verify the status of subscription license and upda
 
 ## Bugs en 7.0.7
   
-  Lors de la mise à jour du fortiproxy de 7.0.4 à 7.0.7 pour corriger la CVE-2022-40684 fait sauter tous les certificats pré-configurés dans les Profiles d'inspection SSL/SSH.
+  Lors de la mise à jour du fortiproxy de 7.0.4 à 7.0.7 pour corriger la CVE-2022-40684 fait sauter tous les certificats pré-configurés dans les Profils d'inspection SSL/SSH.
   
   Il faut manuellement les reconfigurer avec les bons certificats pour que ça fonctionne.
   
-  **Note**: Pour le moment le profile d'inspection SSL/SSH ne fonctionne pas en FTPS: il propose uniquement le certificat autosigné du fortiproxy et pas celui configuré. Un case est ouvert chez Forti.
+  **Note**: Pour le moment le profil d'inspection SSL/SSH ne fonctionne pas en FTPS: il propose uniquement le certificat autosigné du fortiproxy et pas celui configuré. Un case est ouvert chez Forti.
