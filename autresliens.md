@@ -43,3 +43,8 @@ sur top maj+1 pour afficher tous les CPU
 https://dlptest.com/ftp-test/
 
 Dans vim pour supprimer 100 lignes: d100d
+
+## Netcat 
+
+echo ${HOSTNAME}|/tmp/ncat -vz <@ServeurDest> <port>
+
