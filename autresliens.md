@@ -46,5 +46,5 @@ Dans vim pour supprimer 100 lignes: d100d
 
 ## Netcat 
 
-echo ${HOSTNAME}|/tmp/ncat -vz <@ServeurDest> <port>
+echo ${HOSTNAME} | ncat -vz @ServeurDest port
 
