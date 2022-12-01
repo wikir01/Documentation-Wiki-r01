@@ -19,6 +19,7 @@ Si vous rencontrez des difficultés ou avez besoin d'aide sur certaines technolo
 10. [vmware NSX-T: automation](/vmware/NSX-T-Automation-API.md)
 11. [vmware NSX-T: Microsegmentation](/vmware/NSX-T-MicroSegmentation.md)
 12. [vmware NSX-T: automation](/vmware/NSX-T-Automation-API.md)
+14. [vmware NSX-T: Supprimer overlay, T0, T1, Edge Cluster et Edge Node](/vmware/SuppressionOverlay.md)
 13. [Stormshield](/stormshield/stormshield.md)
 
 ### Autres liens
