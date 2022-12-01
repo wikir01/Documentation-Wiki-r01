@@ -1,5 +1,5 @@
 # Supprimer l'overlay de NSX-T 
-_note: uniquement dans le cas où cela a été installé par erreur et qu'on souhaite faire que de la microsegementation.
+_note: uniquement dans le cas où cela a été installé par erreur et qu'on souhaite faire que de la microsegementation._
 
 ## Dans vCenter :
 - migrer les cartes réseau des EDGE sur un réseau vmnetwork (réseau poubelle).
