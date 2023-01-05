@@ -64,3 +64,18 @@ comment afficher le HA
 ======================
 
     show high-availability state
+    
+### Bugs rencontrés: 
+3 Janvier 2022: bug de la version 9.1.13. 
+
+Symptomes: le Palo ne traite plus de trafic et dans l'onglet Monitor tout le trafic a comme commentaire: "resources-unavailable".
+
+https://live.paloaltonetworks.com/t5/general-topics/session-end-reason-resources-unavailable-for-all-traffic/td-p/476097
+
+https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA14u0000004ODICA2&lang=en_US%E2%80%A9
+
+Conclusion de l'histoire: l'espace mémoire pour traiter les REGEX (dans l'IPS/IDS) sature et le Palo ne la libère jamais.
+
+Palo indique qu'un upgrade en 9.1.14 résout le problème mais cela n'a pas été mon cas. J'ai du passer en 9.1.15 pour que la mémoire allouée au traitement des REGEX soit libérée au fur et à mesure. 
+
+Downtime: plusieurs heures.
