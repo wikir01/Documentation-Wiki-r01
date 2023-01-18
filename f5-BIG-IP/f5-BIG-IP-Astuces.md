@@ -19,3 +19,13 @@ HTTP::header replace Host "truc.internal"
 pool le_pool
 }
 ```
+
+## Activer uniquement TLS1.2 sur la WebGui (et retirer les vieux Cipher)
+
+Source: https://support.f5.com/csp/article/K40232071
+```
+tmsh
+list /sys httpd ssl-ciphersuite
+modify /sys httpd ssl-ciphersuite 'ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:!SSLv3:!TLSv1:!TLSv1.1'
+save /sys config
+```
