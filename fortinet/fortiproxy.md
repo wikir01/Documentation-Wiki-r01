@@ -153,3 +153,21 @@ Once the same is done, Please verify the status of subscription license and upda
   Il faut manuellement les reconfigurer avec les bons certificats pour que ça fonctionne.
   
   **Note**: Pour le moment le profil d'inspection SSL/SSH ne fonctionne pas en FTPS: il propose uniquement le certificat autosigné du fortiproxy et pas celui configuré. Un case est ouvert chez Forti.
+  
+## Configuration Filezilla pour FortiProxy en FTP / FTPS Explicite / FTPS Implicite
+  ### FTPS Explicite
+  
+  Pour le FTPS Explicite, les deux configurations ont l'air de fonctionner: le Serveur mandataire FTP ainsi que le Serveur mandataire générique
+  
+  ![](/fortinet/images/FTPExplicite.png)
+  
+  ### FTP en clair:
+  
+  ![](/fortinet/images/FTPetFTPSImplicite.png)
+  
+  ### FTPS Implicite
+  
+  Pour le FTPS Implicite, il ne faut pas configurer le FTP > Serveur mandataire FTP mais le Serveur mandataire générique comme ceci:
+  
+  ![](/fortinet/images/FTPetFTPSImplicite.png)
+  
