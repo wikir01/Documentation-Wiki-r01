@@ -48,3 +48,7 @@ Dans vim pour supprimer 100 lignes: d100d
 
 echo ${HOSTNAME} | ncat -vz @ServeurDest port
 
+## openssl voir certificats
+
+openssl s_client –connect siteweb.com:443 -showcerts
+
