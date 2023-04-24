@@ -17,6 +17,13 @@ Je n'ai pas réussi à réimporter un backup depuis une clé usb, la commande ex
 
 Les commandes execute usb-disk list  et execute usb-device list me retournaient aucun résultats. Je n'ai pas compris. J'ai cependant pu formater la clé usb depuis la CLI FortiProxy preuve qu'il voyait quand même que chose.
 
+# Bug FortiProxy FTP PASSV (bug "by design" d'après le support)
+
+Schema: Client ------> FortiProxy ------> Serveur.
+
+Lors qu'on utilise le Fortiproxy en tant que proxy FTP et que le serveur demande de passer en mode passif (PASSV) un port passif est défini par le serveur.
+Le Fortiproxy contacte bien le serveur sur le port défini mais par contre, il choisit un port random pour passer en mode passif avec le client.
+En terme de flux à ouvrir, il faut donc ouvrir le port TCP/22 (FTP) ainsi que TCP/1024-65535 entre le client et le FortiProxy. Ensuite, il faut ouvrir TCP/22 et les ports passifs définis par le serveur (dans mon cas TCP/50000 à 51000).
 
 
 # Configurer interface management dédié
