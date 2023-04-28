@@ -178,3 +178,21 @@ Once the same is done, Please verify the status of subscription license and upda
   
   ![](/fortinet/images/FTPetFTPSImplicite.png)
   
+## Débug de proxy forward
+  
+  diag wad webproxy forward-server
+  
+  Cette commande donne le status de santé du module WAD du fortiproxy pour les serveurs proxy forward.
+  
+VDOM=root server_name=proxy_forward_1
+        addr=ip/163.116.128.81:8080 health_check=disable down-opt=block 
+        conns: succ=4 fail=0 ongoing=2 hits=4 blocked=0 
+        monitor: succ=0 fail=0 
+        num_worker_load=55 state=up psv_tm=588(sec) arbiter_tm=2(sec) 
+
+VDOM=root server_name=proxy_forward_2
+        addr=ip/163.116.128.80:8080 health_check=disable down-opt=block 
+        conns: succ=9 fail=2 ongoing=2 hits=11 blocked=0 
+        monitor: succ=0 fail=0 
+        num_worker_load=55 state=try_once psv_tm=700(sec) arbiter_tm=10(sec)
+
