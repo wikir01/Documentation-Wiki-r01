@@ -180,8 +180,9 @@ Once the same is done, Please verify the status of subscription license and upda
   
 ## Débug de proxy forward
   
+   ``` 
   diag wad webproxy forward-server
-  
+   ``` 
   Cette commande donne le status de santé du module WAD du fortiproxy pour les serveurs proxy forward.
   ``` 
 VDOM=root server_name=proxy_forward_1
