@@ -183,7 +183,7 @@ Once the same is done, Please verify the status of subscription license and upda
   diag wad webproxy forward-server
   
   Cette commande donne le status de santé du module WAD du fortiproxy pour les serveurs proxy forward.
-  
+  ``` 
 VDOM=root server_name=proxy_forward_1
         addr=ip/163.116.128.81:8080 health_check=disable down-opt=block 
         conns: succ=4 fail=0 ongoing=2 hits=4 blocked=0 
@@ -196,3 +196,4 @@ VDOM=root server_name=proxy_forward_2
         monitor: succ=0 fail=0 
         num_worker_load=55 state=try_once psv_tm=700(sec) arbiter_tm=10(sec)
 
+  ``` 
