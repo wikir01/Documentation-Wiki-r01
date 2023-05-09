@@ -56,3 +56,7 @@ openssl s_client –connect siteweb.com:443 -showcerts
 
 yum --showduplicates list lftp
 
+## Trouver les groupes d'un utilisateur dans l'AD (sans avoir accès à l'AD)
+
+NET USER nomutilisateur /DOMAIN
+
