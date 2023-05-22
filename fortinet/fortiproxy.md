@@ -98,6 +98,8 @@ Le système va redémarrer.
   
   set ssl enable
   
+  set ssl-cert "nomducertificat.cer" /!\ j'ai l'impression que c'est super important car le CA Certificate inclus dans le profile ne fonctionne pas en v7.2.4
+  
   end
   
   ## Créer la Policy de proxification FTPS
