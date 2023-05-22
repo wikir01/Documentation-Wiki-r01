@@ -163,6 +163,8 @@ Once the same is done, Please verify the status of subscription license and upda
   
   **Note**: Pour le moment le profil d'inspection SSL/SSH ne fonctionne pas en FTPS: il propose uniquement le certificat autosigné du fortiproxy et pas celui configuré. Un case est ouvert chez Forti.
   
+  **Note en 7.2.4**: J'ai le même problème. Les profiles d'inspection SSL/SSH ne fonctionnent pas pour du FTPS. J'ai du faire ceci en CLI : «set ssl-cert “nomducertificat.cer”». Le support de Forti ne m'a pas aidé après plein de prises de traces et de logs et d'échanges de configuration. 
+  
 ## Configuration Filezilla pour FortiProxy en FTP / FTPS Explicite / FTPS Implicite
   ### FTPS Explicite
   
