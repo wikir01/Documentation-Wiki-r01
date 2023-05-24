@@ -12,17 +12,17 @@ Afficher toutes les réponses DNS:
 
 ```dns.flags.response == 1```
 
+Afficher toutes les requêtes DNS A:
+
+```dns.qry.type == 1```
+
 Afficher toutes les requêtes HTTP GET:
 
-```http.request.method =="GET"```
+```http.request.method == "GET"```
 
 Afficher toutes les requêtes HTTP POST:
 
 ```http.request.method == "POST"```
-
-Afficher toutes les requêtes DNS A:
-
-```dns.qry.type ==1```
 
 Afficher toutes les serveurs Apache: 
 
