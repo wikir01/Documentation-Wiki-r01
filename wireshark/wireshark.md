@@ -1,5 +1,7 @@
 **Filtres Wireshark utiles**
 
+Quelques filtres utiles en plus de ceux que tout le monde connait.
+
 Afficher tous les packets avec un code réponse HTTP 200:
 
 ```http.response.code == 200```
