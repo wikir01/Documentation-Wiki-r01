@@ -43,15 +43,15 @@ Pour cela, il faut créer une nouvelle Rate Class en allant dans Acceleration > 
 
 ![](/f5-BIG-IP/NewRateClass.png)
 
-Nom: le nom de votre Class de Traffic Shaping
+**Nom**: le nom de votre Class de Traffic Shaping
 
-Rate: Débit garanti pour ce VS
+**Rate**: Débit garanti pour ce VS
 
-Ceiling: Débit MAX pour ce VS
+**Ceiling**: Débit MAX pour ce VS
 
-Burst Size: Nombre d'octet qui peuvent burst (dépasser le Ceiling). 0 pour aucun Burst par exemple.
+**Burst Size**: Nombre d'octet qui peuvent burst (dépasser le Ceiling). 0 pour aucun Burst par exemple.
 
-Direction: Any pour limiter le trafic dans les deux sens ; Client pour limiter le trafic du serveur vers le client ; Server pour limiter le trafic du client vers le Serveur.
+**Direction**: **Any** pour limiter le trafic dans les deux sens ; **Client** pour limiter le trafic du serveur vers le client ; **Server** pour limiter le trafic du client vers le Serveur.
 
 
 Une fois la Class créée, on peut l'appliquer sur un VS: 
