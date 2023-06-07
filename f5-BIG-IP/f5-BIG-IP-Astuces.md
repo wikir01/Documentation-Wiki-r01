@@ -51,4 +51,4 @@ Direction: Any pour limiter le trafic dans les deux sens ; Client pour limiter l
 
 Une fois la Class créée, on peut l'appliquer sur un VS: 
 
-![](/f5-BIG-IP/NewRateClass.png)
+![](/f5-BIG-IP/RateClassVS.png)
