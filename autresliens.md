@@ -59,4 +59,9 @@ yum --showduplicates list lftp
 ## Trouver les groupes d'un utilisateur dans l'AD (sans avoir accès à l'AD)
 
 NET USER nomutilisateur /DOMAIN
+ou gpresult /r
+
+## Pour debug du Windows
+
+Procmon pour voir tout ce qu'il se passe terme de processus / applications.
 
