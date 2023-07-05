@@ -52,6 +52,10 @@ echo ${HOSTNAME} | ncat -vz @ServeurDest port
 
 openssl s_client –connect siteweb.com:443 -showcerts
 
+## Voir le contenu d'un certificat avec certutil
+
+certutil -v
+
 ## Chercher sur Redhat les différentes versions d'un package
 
 yum --showduplicates list lftp
