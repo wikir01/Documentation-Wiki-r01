@@ -1,7 +1,7 @@
-'''
+```
 # Get the string we want to search for 
 $string = Read-Host -Prompt "What string do you want to search for?" 
- 
+
 # Set the domain to search for GPOs
 $DomainName = "YOURDOMAIN"
 echo $DomainName
@@ -29,4 +29,4 @@ write-host "Results: **************" -foregroundcolor "Yellow"
 foreach ($match in $MatchedGPOList) { 
     write-host "Match found in: $($match)" -foregroundcolor "Green"
 }
-'''
+```
