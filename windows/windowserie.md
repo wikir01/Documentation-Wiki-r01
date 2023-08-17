@@ -1,4 +1,4 @@
-Petit script powershell pour chercher du texte dans toutes les GPO du domaine:
+# Petit script powershell pour chercher du texte dans toutes les GPO du domaine:
 
 ```
 # Get the string we want to search for 
