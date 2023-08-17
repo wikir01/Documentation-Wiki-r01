@@ -1,3 +1,5 @@
+Petit script powershell pour chercher du texte dans toutes les GPO du domaine:
+
 ```
 # Get the string we want to search for 
 $string = Read-Host -Prompt "What string do you want to search for?" 
