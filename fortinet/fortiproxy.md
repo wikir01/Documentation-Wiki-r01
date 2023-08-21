@@ -208,3 +208,21 @@ VDOM=root server_name=proxy_forward_2
   ``` 
 
   On peut voir l'état de santé du groupe avec cette commande.
+
+  ## Utilisateur qui a "Group Information Query Failed"
+  
+  ![](/fortinet/images/Group_information_Query_Failed.png)
+
+```
+diag debug reset
+diag debug console timestamp enable
+show auth rule
+show auth scheme
+show user group
+diagnose wad filter src x.x.x.x --> Filtre sur l'IP du client
+diagnose wad debug enable category policy
+diagnose wad debug enable category auth
+diag wad debug enable level verbose
+Diag debug app fnbamd -1
+diagnose debug enable 
+```
