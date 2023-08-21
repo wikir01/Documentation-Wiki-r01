@@ -226,3 +226,30 @@ diag wad debug enable level verbose
 Diag debug app fnbamd -1
 diagnose debug enable 
 ```
+
+### Exemple et analyse de traces
+```
+2023-08-18 09:50:29 [1718] fnbamd_ldap_init-search filter is: (&(userPrincipalName=julien@DOMAIN.R01.FR)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))
+2023-08-18 09:50:29 [1728] fnbamd_ldap_init-search base is: DC=DOMAIN,DC=R01,DC=FR
+...
+2023-08-18 09:50:29 [750] fnbamd_ldap_build_dn_search_req-base:'DC=DOMAIN,DC=R01,DC=FR' filter:(&(userPrincipalName=julien@DOMAIN.R01.FR)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))
+...
+2023-08-18 09:50:29 [1244] __fnbamd_ldap_dn_next-No DN is found.
+2023-08-18 09:50:29 [1053] __ldap_rxtx-Change state to 'Done'
+2023-08-18 09:50:29 [724] __ldap_stop-Conn with AA.BB.CC.DD destroyed. (IP de l'AD)
+2023-08-18 09:50:29 [216] fnbamd_comm_send_result-Sending result 1 (nid 0) for req 1098542827, len=2148
+[E]2023-08-18 09:50:29.684943 [p:12765] wad_group_info_auth_on_fnbam_resp :142 auth resp:0x7ffd809c3140 ,auth failure auth result:9
+[I]2023-08-18 09:50:29.684959 [p:12765][s:2020264253][r:172993228] wad_http_auth_status_proc :10661 ses_ctx: ses_ctx:cx|Phx|Me|Hh|C|A7m|O authenticate result=group-query-failed
+```
+
+### Explications
+Le processus **wad** détecte qu'il y a une authentification / membership lookup à faire et demande au processus **fnbamd** de le faire
+**wad** process will basically see that there is an authentication/membership lookup to be done and ask the respective process **fnbamd** to do it.
+
+Le processus **fnbamd** essaie de gérer l'authentification / vérifier l'appartenance aux groupes avec les paramètres que **wad** lui a donné (entre autre, le userPrincipalName)
+**fnbamd** tries with the respective settings and the username supplied.
+
+Note: userPrincipalName=julien@DOMAIN.R01.FR et le compte associé doivent exister et être actif dans l'AD
+
+**fnbamd** asks for an Attribute name **UserPrincipalName** with the value julien@DOMAIN.R01.FR below the tree DC=DOMAIN,DC=R01,DC=FR and the LDAP server returns that it doesn't have a result for this query. Literally that this Attribute UserPrincipalName with value julien@DOMAIN.R01.FR does not exist.
+It likewise returns this information to wad, whereas wad the says that the query it made to fnbamd returned an error. Likewise, it says that the group information query failed.
