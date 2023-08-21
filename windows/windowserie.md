@@ -32,3 +32,9 @@ foreach ($match in $MatchedGPOList) {
     write-host "Match found in: $($match)" -foregroundcolor "Green"
 }
 ```
+## Avoir toutes les infos d'un compte AD en Powershell
+
+```
+Import-Module ActiveDirectory
+Get-ADUser -Server votredomaine.fr -Identity "votreuser" -Properties *
+```
