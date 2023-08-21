@@ -252,4 +252,9 @@ Le processus **fnbamd** essaie de gérer l'authentification / vérifier l'appart
 Note: userPrincipalName=julien@DOMAIN.R01.FR et le compte associé doivent exister et être actif dans l'AD
 
 **fnbamd** asks for an Attribute name **UserPrincipalName** with the value julien@DOMAIN.R01.FR below the tree DC=DOMAIN,DC=R01,DC=FR and the LDAP server returns that it doesn't have a result for this query. Literally that this Attribute UserPrincipalName with value julien@DOMAIN.R01.FR does not exist.
+
 It likewise returns this information to wad, whereas wad the says that the query it made to fnbamd returned an error. Likewise, it says that the group information query failed.
+
+Dans mon cas, le compte julien@DOMAIN.R01.FR a été créé avec un oubli de lettre : userPrincipalName=jlien@DOMAIN.R01.FR alors que le CN et le DisplayName étaient bons.
+
+__Conclusion__ Il faut vérifier dans l'AD les paramètres du compte car le userPrincipalName ne correspond pas au jeton Kerberos.
