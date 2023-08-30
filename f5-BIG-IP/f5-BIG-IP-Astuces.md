@@ -57,3 +57,7 @@ Pour cela, il faut créer une nouvelle Rate Class en allant dans Acceleration > 
 Une fois la Class créée, on peut l'appliquer sur un VS: 
 
 ![](/f5-BIG-IP/RateClassVS.png)
+
+## Trouver tous les certificats qui ont expiré
+
+Dans le champ recherche de la page System > Certificate Management: mettre "EXPIRED_CERTIFICATE_IN_USE" et vous aurez tous les certificats qui ont expiré mais qui sont utilisés dans un Profile SSL dans un VS.
