@@ -38,3 +38,9 @@ foreach ($match in $MatchedGPOList) {
 Import-Module ActiveDirectory
 Get-ADUser -Server votredomaine.fr -Identity "votreuser" -Properties *
 ```
+
+## Savoir quelle est la configuration proxy du système Windows en Powershell
+
+```
+Get-ItemProperty -Path "Registry::HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings"
+```
