@@ -143,7 +143,13 @@ secret=$(openssl enc -d -aes-256-cbc -in secrets/encrypted.enc -pass pass:$var_k
 Pour RHEL 8:
 ```
 var_key=$(cat secrets/hash.key | base64 --decode)
+
 secret=$(openssl aes-256-cbc -d -salt -pbkdf2 -iter 10000 -in secrets/encrypted.enc -k $var_key)
 ```
 
 La variable $secret contient le mot de passe du compte de service et peut être utilisée dans le script.
+
+### 9- REGEX IP
+```
+([0-9]{1,3}\.){3}([0-9]{1,3})
+```
