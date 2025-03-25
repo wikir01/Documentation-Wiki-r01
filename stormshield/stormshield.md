@@ -149,5 +149,90 @@ config object sync activate
 config ntp server add name=monserveurntp.domaine bindaddr=Firewall_nomduvlandansifinfo
 ````
 
+## Sourcer un ping depuis une IP particulière d'un Stormshield
+````
+ping -S @ipsource @ipdest
+````
 
+## Activer la bascule dès la perte d'un lien du LACP (et pas du LACP complet)
+````
+vi ConfigFiles/HA/highavailability
+Dans le fichier, mettre =1 à LACPMembersHaveWeight
+LACPMembersHaveWeight=1
+````
+
+## hainfo
+````
+monstormshield>hainfo
+
+Nodes status:
+                  SN-Membre-1 (local)       SN-Membre-2
+
+model          :  SN-XL-Series-5200             SN-XL-Series-5200
+version        :  4.3.34                        4.3.34
+forced         :  No                            No
+mode           :  Active                        Passive
+  since        :  2025-03-12 15:37:26           2025-03-25 14:03:17
+backup active  :  Main                          Main
+backup ver.    :  4.3.33                        4.3.33
+backup date    :  2025-02-25 12:59:11           2025-02-25 12:59:27
+quality        :  80                            80
+priority       :  0                             0
+file sync      :  None running                  None running
+is conf sync   :  no                            yes
+boot           :  2025-03-12 14:43:11           2025-03-25 14:00:28
+main link      :  10.10.10.10: OK                   10.10.10.20: OK
+backup link    :  10.10.20.10: OK                   10.10.20.20: OK
+FwadminRevision:  N/A                           N/A
+SystemNodeName :  N/A                           N/A
+````
+
+## hassh
+
+Pour prendre la main en SSH sur le membre secondaire
+
+## haactive
+
+Forcer le membre sur lequel on est à devenir actif. En général, c'est fait après un hassh pour prendre la main sur le secondaire, on fait un haactive pour faire une bascule du primaire au secondaire.
+
+/!\ en faisant ça, ça force le secondaire à être actif. Pour permettre une bascule il faut faire un hareset avant.
+
+Exemple de HA forcé: 
+````
+monstormshield>hainfo
+
+Nodes status:
+                  SN-Membre-1             SN-Membre-2 (local)
+
+model          :  SN-XL-Series-5200             SN-XL-Series-5200
+version        :  4.3.34                        4.3.34
+forced         :  No                            Yes <<<<<<<<<<<<<<<<<<
+mode           :  Active                        Passive
+  since        :  2025-03-12 15:37:26           2025-03-25 14:03:17
+backup active  :  Main                          Main
+backup ver.    :  4.3.33                        4.3.33
+backup date    :  2025-02-25 12:59:11           2025-02-25 12:59:27
+quality        :  80                            80
+priority       :  0                             0
+file sync      :  None running                  None running
+is conf sync   :  no                            yes
+boot           :  2025-03-12 14:43:11           2025-03-25 14:00:28
+main link      :  10.10.10.10: OK                   10.10.10.20: OK
+backup link    :  10.10.20.10: OK                   10.10.20.20: OK
+FwadminRevision:  N/A                           N/A
+SystemNodeName :  N/A                           N/A
+````
+## hareset
+
+Pour désactiver le forcage de HA --> Permet de refaire une bascule dans l'autre sens sinon on reste sur le membre forcé.
+
+## clear interface réseau et donc ARP: 
+
+ennetwork
+
+/!\ ça fait une micro coupure car ça coupe toutes les interfaces avant de les rendre opérationnelles.
+
+## hasync -v
+
+Pour syncro la conf en CLI (-v pour avoir en mode verbose)
 
