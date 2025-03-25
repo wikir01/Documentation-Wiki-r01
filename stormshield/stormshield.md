@@ -124,5 +124,30 @@ Une fois que l'interface physique est configurée en DHCP (même si on n'en fait
 
 Capture Création de VLAN
 
+## Vérifier que les serveurs NTP sont joignables:
+
+````
+monstormshield>ntpq -p
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+*serveurntp1 .TMF.            1 u   52   64   77    0.736   +0.379   0.364
++serveurntp2 .TMF.            1 u   48   64   77    0.711   +0.336   0.170
+````
+
+## Bind les requêtes DNS par l'interface de management
+
+Directement en Gui dans Système > Console CLI:
+
+````
+config object sync update bindaddr=Firewall_nomduvlandansifinfo
+config object sync activate
+````
+
+
+## Bind les requêtes NTP par l'interface de management (bug dans les version 4.3 car ça ne fonctionne pas mais contournable avec du NAT):
+````
+config ntp server add name=monserveurntp.domaine bindaddr=Firewall_nomduvlandansifinfo
+````
+
 
 
