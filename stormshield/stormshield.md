@@ -150,19 +150,14 @@ config ntp server add name=monserveurntp.domaine bindaddr=Firewall_nomduvlandans
 ````
 
 Pour le moment, ça ne marche pas et j'ai du faire du NAT pour que ça fonctionne.
-
+````
 Source Originale: interface du parefeu qui a la route par défaut
-
 Destination Originale: Machines Destinations: le serveur NTP + Port Destination : ntp
-
 Source Translatée: interface de management du parefeu (ou de celle qu'on veut sourcer le trafic)
-
 Destination Translatée: any
-
 Protocole: ne rien toucher
-
 Option: si la default gateway est dans un tunnel alors cocher la case "NAT dans le tunnel IPSec.
-
+````
 
 ## Sourcer un ping depuis une IP particulière d'un Stormshield
 ````
