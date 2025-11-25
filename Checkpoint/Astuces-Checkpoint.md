@@ -1,3 +1,5 @@
+
+## Activation du FastAccel sur un flux entre deux IPs
 Doit être fait sur les deux membres du cluster:
 
 fw ctl fast_accel show_state
